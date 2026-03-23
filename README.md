@@ -9,7 +9,8 @@
 `docker build -t momo-apm-demo:v1 .`
 
 ### Step 3. Create Docker Repo 
-```gcloud artifacts repositories create momo-demo-repo \
+```
+gcloud artifacts repositories create momo-demo-repo \
     --repository-format=docker \
     --location=asia-east1 \
     --description="Docker repo for momo APM demo"
@@ -17,7 +18,7 @@
 
 
 ### Step 4. Setting Docker Auth 
-### `gcloud auth configure-docker asia-east1-docker.pkg.dev`
+`gcloud auth configure-docker asia-east1-docker.pkg.dev`
 
 ### Step 5. Tag Your Docker Image & Push To GCP Repo 
 `docker tag momo-apm-demo:v1 asia-east1-docker.pkg.dev/YOUR_PROJECT_ID/momo-demo-repo/momo-apm-demo:v1`
